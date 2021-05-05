@@ -6,7 +6,7 @@ var letras = ['T', 'R', 'W', 'I', 'U', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', '
 
 
 if(isNaN(numero)){
-    alert("No es un numero")
+    alert("No es un numero :(")
 }
 else{
 
@@ -17,16 +17,21 @@ else{
   
         var letraElegida= prompt("Ingresá una letra")
         
-        var letraElegidaMayuscula= letraElegida.toUpperCase()
+        if (isNaN(letraElegida)){
+                 var letraElegidaMayuscula= letraElegida.toUpperCase()
 
-        var letraNumero = letras[numero]
+                 var letraNumero = letras[numero]
 
-        if(letraNumero==letraElegidaMayuscula){
+                 if(letraNumero==letraElegidaMayuscula){
 
-         alert("El número y la letra coinciden...Felicitaciones “Has ganado”.")
-        }
+                  alert("El número y la letra coinciden...Felicitaciones “Has ganado” :)")
+                 }
+                 else{
+                     alert(`No coinciden el número y la letra... "Has perdido" :(`)
+                 }
+                }
         else{
-            alert(`No coinciden el número y la letra... "Has perdido".`)
+            alert("En vez de ingresar una letra, ingresaste un número :( ")
         }
     }
 }
